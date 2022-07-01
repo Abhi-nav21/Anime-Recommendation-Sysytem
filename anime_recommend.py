@@ -47,22 +47,7 @@ rating_sort = rating.sort_values(by="rated", ascending=False)
 # print(anime.head())
 anime_pivot_table = anime.pivot_table(index="user_id", columns="name", values="rated")
 # print(anime_pivot_table.head())
-high_School_DxD_user_ratings = anime_pivot_table["High School DxD"]
-# print(high_School_DxD_user_ratings)
 
-similar_to_high_School_DxD = anime_pivot_table.corrwith(high_School_DxD_user_ratings)
-correlation_high_school_dxd = pd.DataFrame(similar_to_high_School_DxD, columns=["correlation"])
-correlation_high_school_dxd.dropna(inplace=True)
-correlation_high_school_dxd_sort = correlation_high_school_dxd.sort_values("correlation", ascending=False)
-# print(correlation_high_school_dxd)
-# print(rating)
-correlation_high_school_dxd = correlation_high_school_dxd.join(rating["count"])
-# print(correlation_high_school_dxd)
-correlation_high_school_dxd_filter = correlation_high_school_dxd[
-    correlation_high_school_dxd["count"] > 300].sort_values("correlation", ascending=False)
-
-
-# print(correlation_high_school_dxd_filter)
 
 
 # function
