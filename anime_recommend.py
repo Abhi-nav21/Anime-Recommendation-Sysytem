@@ -13,7 +13,7 @@ df = df.drop(columns=['members', 'type', 'episodes', 'genre'])
 # print(df.shape)
 # print(df.columns)
 
-user_df = pd.read_csv("C:\\Users\\abhi2\\Documents\\Self Learning\\python\\rating.csv")
+user_df = pd.read_csv("rating.csv")
 # print(user_df.head())
 # print(user_df.shape)
 # print(user_df["user_id"].nunique())
