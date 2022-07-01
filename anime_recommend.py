@@ -6,7 +6,7 @@ import warnings
 
 warnings.filterwarnings("ignore")
 
-df = pd.read_csv("C:\\Users\\abhi2\\Documents\\Self Learning\\python\\anime.csv")
+df = pd.read_csv("anime.csv")
 df = df.drop(columns=['members', 'type', 'episodes', 'genre'])
 
 # print(df.head())
